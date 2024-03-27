@@ -246,6 +246,25 @@ OQS_API int OQS_KEM_alg_is_enabled(const char *method_name) {
 		return 0;
 #endif
 	}
+	 else if( 0 == strcasecmp(method_name, OQS_KEM_alg_fptru_653)) {
+#ifdef OQS_KEM_alg_fptru_653
+		return 1;
+#else 
+		return 0;
+#endif
+	} else if( 0 == strcasecmp(method_name, OQS_KEM_alg_fptru_761)) {
+#ifdef OQS_KEM_alg_fptru_761
+		return 1;
+#else 
+		return 0;
+#endif
+	} else if( 0 == strcasecmp(method_name, OQS_KEM_alg_fptru_1277)) {
+#ifdef OQS_KEM_alg_fptru_1277
+		return 1;
+#else 
+		return 0;
+#endif
+	}
 	
 	else {
 		return 0;
@@ -421,8 +440,31 @@ OQS_API OQS_KEM *OQS_KEM_new(const char *method_name) {
 		// HXW
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_ctruprime_653)) {
 #ifdef OQS_ENABLE_KEM_ctruprime_653
-		printf("[In kem.c] Try to new ctruprime653\n" );
 		return OQS_KEM_ctruprime_653_new(); //TODO:检查在cmake中的定义是否能够达到正确的效果
+#else
+		return NULL;
+#endif
+	} 
+
+	else if (0 == strcasecmp(method_name, OQS_KEM_alg_fptru_653)) {
+#ifdef OQS_ENABLE_KEM_fptru_653
+		return OQS_KEM_fptru_653_new(); 
+#else
+		return NULL;
+#endif
+	} 
+
+	else if (0 == strcasecmp(method_name, OQS_KEM_alg_fptru_761)) {
+#ifdef OQS_ENABLE_KEM_fptru_761
+		return OQS_KEM_fptru_761_new(); 
+#else
+		return NULL;
+#endif
+	} 
+
+	else if (0 == strcasecmp(method_name, OQS_KEM_alg_fptru_1277)) {
+#ifdef OQS_ENABLE_KEM_fptru_1277
+		return OQS_KEM_fptru_1277_new(); 
 #else
 		return NULL;
 #endif
