@@ -30,21 +30,21 @@ OQS_KEM *OQS_KEM_fptru_761_new(void) {
     return kem;
 }
 
-/*2024-1-23
+/*2024-3-27
 调用在源码中已经实现的函数，来完成函数的封装
 */
 extern int crypto_kem_keygen(unsigned char *pk, unsigned char *sk);
 extern int crypto_kem_encaps(unsigned char *ct, unsigned char *k,const unsigned char *pk);
 extern int crypto_kem_decaps(unsigned char *k,const unsigned char *ct,const unsigned char *sk);
 
-OQS_API OQS_STATUS OQS_KEM_ctruprime_761_keypair(uint8_t *public_key,uint8_t *secret_key) {
+OQS_API OQS_STATUS OQS_KEM_fptru_761_keypair(uint8_t *public_key,uint8_t *secret_key) {
     return (OQS_STATUS) crypto_kem_keygen(public_key ,secret_key); //TODO:这里的强制类型转化可能会存在问题  根据虚拟机上的结果修改一下->经过测试，加不加的结果都是不匹配(sad)
 }
 
-OQS_API OQS_STATUS OQS_KEM_ctruprime_761_encaps(uint8_t *ciphertext,uint8_t *shared_secret,const uint8_t *public_key) {
+OQS_API OQS_STATUS OQS_KEM_fptru_761_encaps(uint8_t *ciphertext,uint8_t *shared_secret,const uint8_t *public_key) {
     return (OQS_STATUS) crypto_kem_encaps(ciphertext,shared_secret,public_key);
 }
 
-OQS_API OQS_STATUS OQS_KEM_ctruprime_761_decaps(uint8_t *shared_secret,const uint8_t *ciphertext,const uint8_t *secret_key) {
+OQS_API OQS_STATUS OQS_KEM_fptru_761_decaps(uint8_t *shared_secret,const uint8_t *ciphertext,const uint8_t *secret_key) {
     return (OQS_STATUS) crypto_kem_decaps(shared_secret ,ciphertext ,secret_key);
 }
