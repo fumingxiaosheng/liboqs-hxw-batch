@@ -34,9 +34,16 @@ if(OQS_ENABLE_KEM_KYBER)
     add_subdirectory(kem/kyber)
     set(KEM_OBJS ${KEM_OBJS} ${KYBER_OBJS})
 endif()
+
+#HXW
 if(OQS_ENABLE_KEM_CTRUPRIME)
     add_subdirectory(kem/ctruprime)
     set(KEM_OBJS ${KEM_OBJS} ${CTRUPRIME_OBJS})
+endif()
+
+if(OQS_ENABLE_KEM_FPTRU)
+    add_subdirectory(kem/fptru)
+    set(KEM_OBJS ${KEM_OBJS} ${FPTRU_OBJS})
 endif()
 
 if(OQS_ENABLE_SIG_DILITHIUM)

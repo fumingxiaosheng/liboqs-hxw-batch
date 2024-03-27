@@ -174,6 +174,10 @@ if(OQS_ENABLE_KEM_CTRUPRIME)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/ctruprime/kem_ctruprime.h) #路径不要写错
 endif()
 
+if(OQS_ENABLE_KEM_FPTRU)
+    set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/fptru/kem_fptru.h)
+endif()
+
 if(OQS_ENABLE_SIG_DILITHIUM)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/sig/dilithium/sig_dilithium.h)
 endif()
