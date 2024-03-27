@@ -233,7 +233,7 @@ endif()
 
 #  HXW
 
-option(OQS_ENABLE_KEM_CTRUPRIME "Enable ctruprime algorithm family" ON)
+option(OQS_ENABLE_KEM_CTRUPRIME "Enable ctruprime algorithm family" OFF)
 cmake_dependent_option(OQS_ENABLE_KEM_ctruprime_653 "" ON "OQS_ENABLE_KEM_CTRUPRIME" OFF)
 
 option(OQS_ENABLE_KEM_FPTRU "Enable fptru algorithm family" ON)
