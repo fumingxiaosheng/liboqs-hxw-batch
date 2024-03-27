@@ -231,13 +231,15 @@ endif()
 endif()
 endif()
 
-# HXW
+#  HXW
 
 option(OQS_ENABLE_KEM_CTRUPRIME "Enable ctruprime algorithm family" ON)
 cmake_dependent_option(OQS_ENABLE_KEM_ctruprime_653 "" ON "OQS_ENABLE_KEM_CTRUPRIME" OFF)
 
 option(OQS_ENABLE_KEM_FPTRU "Enable fptru algorithm family" ON)
 cmake_dependent_option(OQS_ENABLE_KEM_fptru_653 "" ON "OQS_ENABLE_KEM_FPTRU" OFF)
+cmake_dependent_option(OQS_ENABLE_KEM_fptru_761 "" ON "OQS_ENABLE_KEM_FPTRU" OFF)
+cmake_dependent_option(OQS_ENABLE_KEM_fptru_1277 "" ON "OQS_ENABLE_KEM_FPTRU" OFF)
 
 
 option(OQS_ENABLE_SIG_DILITHIUM "Enable dilithium algorithm family" ON)
