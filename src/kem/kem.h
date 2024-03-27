@@ -93,6 +93,11 @@ extern "C" {
 
 #define OQS_KEM_alg_ctruprime_1277 "Ctruprime1277"
 
+#define OQS_KEM_alg_fptru_653 "Fptru653"
+
+#define OQS_KEM_alg_fptru_761 "Fptru761"
+
+#define OQS_KEM_alg_fptru_1277 "Fptru1277"
 
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_START
 /** Number of algorithm identifiers above. */
@@ -289,6 +294,10 @@ OQS_API void OQS_KEM_free(OQS_KEM *kem);
 //HXW
 #ifdef OQS_ENABLE_KEM_CTRUPRIME
 #include <oqs/kem_ctruprime.h>
+#endif
+
+#ifdef OQS_ENABLE_KEM_FPTRU
+#include <oqs/kem_fptru.h>
 #endif
 
 

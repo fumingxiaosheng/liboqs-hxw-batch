@@ -46,6 +46,11 @@ OQS_API const char *OQS_KEM_alg_identifier(size_t i) {
 		OQS_KEM_alg_ctruprime_653,
 		OQS_KEM_alg_ctruprime_761,
 		OQS_KEM_alg_ctruprime_1277,
+		//HXW
+		OQS_KEM_alg_fptru_653,
+		OQS_KEM_alg_fptru_761,
+		OQS_KEM_alg_fptru_1277,
+
 	};
 	if (i >= OQS_KEM_algs_length) {
 		return NULL;
