@@ -1,3 +1,4 @@
+#pragma once
 #ifndef FPTRU_H
 #define FPTRU_H
 

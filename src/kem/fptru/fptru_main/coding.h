@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CODING_H
 #define CODING_H
 

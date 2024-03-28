@@ -1,3 +1,4 @@
+#pragma once
 #ifndef PRINT_SPEED_H
 #define PRINT_SPEED_H
 

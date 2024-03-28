@@ -1,3 +1,4 @@
+#pragma once
 #ifndef SYMMETRIC_CRYPTO
 #define SYMMETRIC_CRYPTO
 

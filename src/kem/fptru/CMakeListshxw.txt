@@ -50,3 +50,179 @@ if(OQS_ENABLE_KEM_fptru_1277)
 endif()
 
 set(FPTRU_OBJS ${_FPTRU_OBJS} PARENT_SCOPE)
+
+#######################################
+set(_FPTRU_OBJS "")
+# Create an OBJECT library with all files except kem_fptru_main.c
+# Create an OBJECT library with all files except kem_fptru_653.c
+add_library(fptru_653_common OBJECT
+    fptru_653/poly_mul_n653q/radix_ntt_n653.c
+    fptru_653/cbd.c
+    fptru_653/coding.c
+    fptru_653/cpucycles.c
+    fptru_653/fips202.c
+    fptru_653/inverse.c
+    fptru_653/pack.c
+    fptru_653/pke.c
+    fptru_653/poly.c
+    fptru_653/randombytes.c
+    fptru_653/reduce.c
+    fptru_653/speed.c
+    fptru_653/kem.c
+)
+target_compile_options(fptru_653_common PUBLIC -DFPTRU_N=653)
+target_include_directories(fptru_653_common PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/fptru_653
+    ${CMAKE_CURRENT_LIST_DIR}/fptru_653/poly_mul_n653q
+)
+
+# If OQS_ENABLE_KEM_fptru_653 is true, create fptru_653 OBJECT library
+if(OQS_ENABLE_KEM_fptru_653)
+    add_library(fptru_653 OBJECT kem_fptru_653.c fptru_653/kem.c)
+    target_include_directories(fptru_653 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_653)
+    target_link_libraries(fptru_653 PRIVATE fptru_653_common)
+    set(_FPTRU_OBJS ${_FPTRU_OBJS} $<TARGET_OBJECTS:fptru_653>)
+endif()
+
+
+set(FPTRU_OBJS ${_FPTRU_OBJS} PARENT_SCOPE)
+
+报错:
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/kem.c.o: in function `crypto_kem_keygen':
+kem.c:(.text.crypto_kem_keygen+0x34): undefined reference to `randombytes'
+/usr/bin/ld: kem.c:(.text.crypto_kem_keygen+0x49): undefined reference to `shake256'
+/usr/bin/ld: kem.c:(.text.crypto_kem_keygen+0x57): undefined reference to `crypto_pke_keygen'
+/usr/bin/ld: kem.c:(.text.crypto_kem_keygen+0xc1): undefined reference to `randombytes'
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/kem.c.o: in function `crypto_kem_encaps':
+kem.c:(.text.crypto_kem_encaps+0x47): undefined reference to `randombytes'
+/usr/bin/ld: kem.c:(.text.crypto_kem_encaps+0x5c): undefined reference to `shake256'
+/usr/bin/ld: kem.c:(.text.crypto_kem_encaps+0x8c): undefined reference to `sha3_512'
+/usr/bin/ld: kem.c:(.text.crypto_kem_encaps+0xa1): undefined reference to `shake256'
+/usr/bin/ld: kem.c:(.text.crypto_kem_encaps+0xb2): undefined reference to `crypto_pke_enc'
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/kem.c.o: in function `crypto_kem_decaps':
+kem.c:(.text.crypto_kem_decaps+0x53): undefined reference to `crypto_pke_dec'
+/usr/bin/ld: kem.c:(.text.crypto_kem_decaps+0x92): undefined reference to `sha3_512'
+/usr/bin/ld: kem.c:(.text.crypto_kem_decaps+0xa7): undefined reference to `shake256'
+/usr/bin/ld: kem.c:(.text.crypto_kem_decaps+0xbd): undefined reference to `crypto_pke_enc'
+/usr/bin/ld: kem.c:(.text.crypto_kem_decaps+0x17e): undefined reference to `sha3_512'
+
+######################################
+set(_FPTRU_OBJS "")
+
+if(OQS_ENABLE_KEM_fptru_653)
+    add_library(fptru_653 OBJECT kem_fptru_653.c fptru_653/poly_mul_n653q/radix_ntt_n653.c fptru_653/cbd.c fptru_653/coding.c fptru_653/cpucycles.c fptru_653/fips202.c fptru_653/inverse.c fptru_653/kem.c fptru_653/pack.c fptru_653/pke.c fptru_653/poly.c fptru_653/randombytes.c fptru_653/reduce.c fptru_653/speed.c) #这里不能够有斜杠
+    target_compile_options(fptru_653 PUBLIC -DFPTRU_N=653)
+    target_include_directories(fptru_653 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_653)
+    target_include_directories(fptru_653 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_653/poly_mul_n653q)
+    set(_FPTRU_OBJS ${_FPTRU_OBJS} $<TARGET_OBJECTS:fptru_653>)
+endif()
+
+if(OQS_ENABLE_KEM_fptru_761)
+    add_library(fptru_761 OBJECT kem_fptru_761.c fptru_761/poly_mul_n761q/radix_ntt_n761.c fptru_761/cbd761.c fptru_761/coding761.c fptru_761/cpucycles761.c fptru_761/fips202761.c fptru_761/inverse761.c fptru_761/kem761.c fptru_761/pack761.c fptru_761/pke761.c fptru_761/poly761.c fptru_761/randombytes761.c fptru_761/reduce761.c fptru_761/speed761.c) #这里不能够有斜杠
+    target_compile_options(fptru_761 PUBLIC -DFPTRU_N=761)
+    target_include_directories(fptru_761 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_761)
+    target_include_directories(fptru_761 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_761/poly_mul_n761q)
+    set(_FPTRU_OBJS ${_FPTRU_OBJS} $<TARGET_OBJECTS:fptru_761>)
+endif()
+
+set(FPTRU_OBJS ${_FPTRU_OBJS} PARENT_SCOPE)
+
+
+
+
+报错:
+kem761.c:(.text.crypto_kem_keygen+0x0): multiple definition of `crypto_kem_keygen'; src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/kem.c.o:kem.c:(.text.crypto_kem_keygen+0x0): first defined here
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_761.dir/fptru_761/kem761.c.o: in function `crypto_kem_encaps':
+kem761.c:(.text.crypto_kem_encaps+0x0): multiple definition of `crypto_kem_encaps'; src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/kem.c.o:kem.c:(.text.crypto_kem_encaps+0x0): first defined here
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_761.dir/fptru_761/kem761.c.o: in function `crypto_kem_decaps':
+kem761.c:(.text.crypto_kem_decaps+0x0): multiple definition of `crypto_kem_decaps'; src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/kem.c.o:kem.c:(.text.crypto_kem_decaps+0x0): first defined here
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_761.dir/fptru_761/pack761.c.o: in function `Encode':
+pack761.c:(.text.Encode+0x0): multiple definition of `Encode'; src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/pack.c.o:pack.c:(.text.Encode+0x0): first defined here
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_761.dir/fptru_761/pack761.c.o: in function `pack_pk':
+pack761.c:(.text.pack_pk+0x0): multiple definition of `pack_pk'; src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/pack.c.o:pack.c:(.text.pack_pk+0x0): first defined here
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_761.dir/fptru_761/pack761.c.o: in function `Decode':
+pack761.c:(.text.Decode+0x0): multiple definition of `Decode'; src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/pack.c.o:pack.c:(.text.Decode+0x0): first defined here
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_761.dir/fptru_761/pack761.c.o: in function `unpack_pk':
+pack761.c:(.text.unpack_pk+0x0): multiple definition of `unpack_pk'; src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/pack.c.o:pack.c:(.text.unpack_pk+0x0): first defined here
+/usr/bin/ld: src/kem/fptru/CMakeFiles/fptru_761.dir/fptru_761/pack761.c.o: in function `pack_sk':
+pack761.c:(.text.pack_sk+0x0): multiple definition of `pack_sk'; src/kem/fptru/CMakeFiles/fptru_653.dir/fptru_653/pack.c.o:pack.c:(.text.pack_sk+0x0): first defined here
+
+###########################可以只用一个头文件嘛######################
+
+
+set(_FPTRU_OBJS "")
+
+if(OQS_ENABLE_KEM_fptru_653)
+    message("huxiaowen")
+    add_compile_definitions(FPTRU_N=653)
+    add_library(fptru_common OBJECT
+        fptru_main/cbd.c
+        fptru_main/coding.c
+        fptru_main/cpucycles.c
+        fptru_main/fips202.c
+        fptru_main/inverse.c
+        fptru_main/pack.c
+        fptru_main/pke.c
+        fptru_main/poly.c
+        fptru_main/randombytes.c
+        fptru_main/reduce.c
+        fptru_main/speed.c
+        fptru_main/kem.c
+    )
+
+    target_include_directories(fptru_common PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/fptru_main
+        ${CMAKE_CURRENT_LIST_DIR}/fptru_main/poly_mul_n653q
+        ${CMAKE_CURRENT_LIST_DIR}/fptru_main/poly_mul_n761q
+        ${CMAKE_CURRENT_LIST_DIR}/fptru_main/poly_mul_n1277q
+    )
+
+
+    add_library(fptru_653 OBJECT kem_fptru_653.c fptru_main/poly_mul_n653q/radix_ntt_n653.c)
+    target_include_directories(fptru_653 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_main)
+    target_include_directories(fptru_653 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_main/poly_mul_n653q)
+    #target_link_libraries(fptru_653 PUBLIC fptru_common)
+    set(_FPTRU_OBJS ${_FPTRU_OBJS} $<TARGET_OBJECTS:fptru_653>)
+endif()
+
+set(FPTRU_OBJS ${_FPTRU_OBJS} PARENT_SCOPE)
+
+报错:原来的报错
+
+#############################################
+set(_FPTRU_OBJS "")
+
+if(OQS_ENABLE_KEM_fptru_653)
+    message("huxiaowen")
+    add_compile_definitions(FPTRU_N=653)
+    add_library(fptru_common OBJECT
+        fptru_main/cbd.c
+        fptru_main/coding.c
+        fptru_main/cpucycles.c
+        fptru_main/fips202.c
+        fptru_main/inverse.c
+        fptru_main/pack.c
+        fptru_main/pke.c
+        fptru_main/poly.c
+        fptru_main/randombytes.c
+        fptru_main/reduce.c
+        fptru_main/speed.c
+        fptru_main/kem.c
+    )
+
+    target_include_directories(fptru_common PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/fptru_main
+        ${CMAKE_CURRENT_LIST_DIR}/fptru_main/poly_mul_n653q
+        ${CMAKE_CURRENT_LIST_DIR}/fptru_main/poly_mul_n761q
+        ${CMAKE_CURRENT_LIST_DIR}/fptru_main/poly_mul_n1277q
+    )
+
+
+    add_library(fptru_653 OBJECT kem_fptru_653.c fptru_main/poly_mul_n653q/radix_ntt_n653.c)
+    target_include_directories(fptru_653 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_main)
+    target_include_directories(fptru_653 PRIVATE ${CMAKE_CURRENT_LIST_DIR}/fptru_main/poly_mul_n653q)
+    #target_link_libraries(fptru_653 PUBLIC fptru_common)
+    set(_FPTRU_OBJS ${_FPTRU_OBJS} $<TARGET_OBJECTS:fptru_653>)
+endif()
+
+set(FPTRU_OBJS ${_FPTRU_OBJS} PARENT_SCOPE)

@@ -1,3 +1,4 @@
+#pragma once
 #ifndef RANDOMBYTES_H
 #define RANDOMBYTES_H
 

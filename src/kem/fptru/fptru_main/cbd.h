@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CBD_H
 #define CBD_H
 

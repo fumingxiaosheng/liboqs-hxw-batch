@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CPUCYCLES_H
 #define CPUCYCLES_H
 
