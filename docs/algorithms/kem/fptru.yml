@@ -1,0 +1,17 @@
+name: FPTRU
+type: kem
+principal-submitters:
+- Liang Zhichuang
+crypto-assumption: NTRU
+website: https://github.com/Prime-KEM/FPTRU-KEM
+nist-round: 1
+spec-version: china
+parameter-sets:
+- name: fptru761
+  claimed-nist-level: 1
+  claimed-security: IND-CCA2
+  length-public-key: 1158
+  length-ciphertext: 952
+  length-secret-key: 1571
+  length-shared-secret: 32
+  implementations-switch-on-runtime-cpu-features: true
