@@ -7,7 +7,7 @@ website: https://github.com/Prime-KEM/FPTRU-KEM
 nist-round: 1
 spec-version: china
 parameter-sets:
-- name: ctruprime653
+- name: ctruprime761
   claimed-nist-level: 1
   claimed-security: IND-CCA2
   length-public-key: 994
