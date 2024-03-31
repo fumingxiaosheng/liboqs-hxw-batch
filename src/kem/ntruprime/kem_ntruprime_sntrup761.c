@@ -45,11 +45,9 @@ OQS_API OQS_STATUS OQS_KEM_ntruprime_sntrup761_keypair(uint8_t *public_key, uint
 #if defined(OQS_DIST_BUILD)
 	if (OQS_CPU_has_extension(OQS_CPU_EXT_AVX2)) {
 #endif /* OQS_DIST_BUILD */
-		printf("use avx2\n");
 		return (OQS_STATUS) PQCLEAN_SNTRUP761_AVX2_crypto_kem_keypair(public_key, secret_key);
 #if defined(OQS_DIST_BUILD)
 	} else {
-		printf("use clean\n");
 		return (OQS_STATUS) PQCLEAN_SNTRUP761_CLEAN_crypto_kem_keypair(public_key, secret_key);
 	}
 #endif /* OQS_DIST_BUILD */
