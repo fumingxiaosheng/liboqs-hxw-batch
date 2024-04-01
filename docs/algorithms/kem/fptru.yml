@@ -7,11 +7,11 @@ website: https://github.com/Prime-KEM/FPTRU-KEM
 nist-round: 1
 spec-version: china
 parameter-sets:
-- name: fptru761
+- name: fptru653
   claimed-nist-level: 1
   claimed-security: IND-CCA2
-  length-public-key: 1158
-  length-ciphertext: 952
-  length-secret-key: 1571
+  length-public-key: 994
+  length-ciphertext: 898
+  length-secret-key: 1353
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
