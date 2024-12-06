@@ -103,7 +103,7 @@ option(OQS_ENABLE_KEM_ntruprime_sntrup761_avx2 "Not enable ntruprime" OFF)
 #endif()
 
 ##### OQS_COPY_FROM_UPSTREAM_FRAGMENT_ADD_ENABLE_BY_ALG_START
-option(OQS_ENABLE_KEM_CLASSIC_MCELIECE "Enable classic_mceliece algorithm family" ON)
+option(OQS_ENABLE_KEM_CLASSIC_MCELIECE "Enable classic_mceliece algorithm family" OFF)
 cmake_dependent_option(OQS_ENABLE_KEM_classic_mceliece_348864 "" ON "OQS_ENABLE_KEM_CLASSIC_MCELIECE" OFF)
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS AND OQS_USE_POPCNT_INSTRUCTIONS))
@@ -237,11 +237,14 @@ endif()
 option(OQS_ENABLE_KEM_CTRUPRIME "Enable ctruprime algorithm family" OFF)
 cmake_dependent_option(OQS_ENABLE_KEM_ctruprime_653 "" ON "OQS_ENABLE_KEM_CTRUPRIME" OFF)
 
-option(OQS_ENABLE_KEM_FPTRU "Enable fptru algorithm family" ON)
+option(OQS_ENABLE_KEM_FPTRU "Enable fptru algorithm family" OFF)
 cmake_dependent_option(OQS_ENABLE_KEM_fptru_653 "" ON "OQS_ENABLE_KEM_FPTRU" OFF)
 cmake_dependent_option(OQS_ENABLE_KEM_fptru_761 "" ON "OQS_ENABLE_KEM_FPTRU" OFF)
 cmake_dependent_option(OQS_ENABLE_KEM_fptru_1277 "" ON "OQS_ENABLE_KEM_FPTRU" OFF)
 
+# HXW2
+option(OQS_ENABLE_KEM_OSKRPRIME "Enable oskrprime algorithm family" ON)
+cmake_dependent_option(OQS_ENABLE_KEM_oskrprime_538 "" ON "OQS_ENABLE_KEM_OSKRPRIME" OFF)
 
 option(OQS_ENABLE_SIG_DILITHIUM "Enable dilithium algorithm family" ON)
 cmake_dependent_option(OQS_ENABLE_SIG_dilithium_2 "" ON "OQS_ENABLE_SIG_DILITHIUM" OFF)
@@ -284,7 +287,7 @@ endif()
 endif()
 
 
-option(OQS_ENABLE_SIG_FALCON "Enable falcon algorithm family" ON)
+option(OQS_ENABLE_SIG_FALCON "Enable falcon algorithm family" OFF)
 cmake_dependent_option(OQS_ENABLE_SIG_falcon_512 "" ON "OQS_ENABLE_SIG_FALCON" OFF)
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS))
     cmake_dependent_option(OQS_ENABLE_SIG_falcon_512_avx2 "" ON "OQS_ENABLE_SIG_falcon_512" OFF)
@@ -308,7 +311,7 @@ endif()
 endif()
 
 
-option(OQS_ENABLE_SIG_SPHINCS "Enable sphincs algorithm family" ON)
+option(OQS_ENABLE_SIG_SPHINCS "Enable sphincs algorithm family" OFF)
 cmake_dependent_option(OQS_ENABLE_SIG_sphincs_sha2_128f_simple "" ON "OQS_ENABLE_SIG_SPHINCS" OFF)
 if(CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin")
 if(OQS_DIST_X86_64_BUILD OR (OQS_USE_AVX2_INSTRUCTIONS))

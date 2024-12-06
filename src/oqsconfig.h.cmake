@@ -118,6 +118,10 @@
 #cmakedefine OQS_ENABLE_KEM_fptru_761 1
 #cmakedefine OQS_ENABLE_KEM_fptru_1277 1
 
+///// HXW2
+#cmakedefine OQS_ENABLE_KEM_OSKRPRIME 1
+#cmakedefine OQS_ENABLE_KEM_oskrprime_538 1
+
 #cmakedefine OQS_ENABLE_SIG_DILITHIUM 1
 #cmakedefine OQS_ENABLE_SIG_dilithium_2 1
 #cmakedefine OQS_ENABLE_SIG_dilithium_2_avx2 1

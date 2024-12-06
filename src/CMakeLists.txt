@@ -46,6 +46,12 @@ if(OQS_ENABLE_KEM_FPTRU)
     set(KEM_OBJS ${KEM_OBJS} ${FPTRU_OBJS})
 endif()
 
+#HXW2
+if(OQS_ENABLE_KEM_OSKRPRIME)
+    add_subdirectory(kem/oskrprime)
+    set(KEM_OBJS ${KEM_OBJS} ${OSKRPRIME_OBJS})
+endif()
+
 if(OQS_ENABLE_SIG_DILITHIUM)
     add_subdirectory(sig/dilithium)
     set(SIG_OBJS ${SIG_OBJS} ${DILITHIUM_OBJS})

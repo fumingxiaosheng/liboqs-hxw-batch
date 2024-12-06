@@ -178,6 +178,12 @@ if(OQS_ENABLE_KEM_FPTRU)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/fptru/kem_fptru.h)
 endif()
 
+#HXW2
+if(OQS_ENABLE_KEM_OSKRPRIME)
+    set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/oskrprime/kem_oskrprime.h)
+endif()
+
+
 if(OQS_ENABLE_SIG_DILITHIUM)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/sig/dilithium/sig_dilithium.h)
 endif()

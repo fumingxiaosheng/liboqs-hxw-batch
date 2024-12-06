@@ -1,0 +1,48 @@
+#ifndef PARAMS_H
+#define PARAMS_H
+
+
+#define OSKR_NAMESPACE(s) fdu_oskrprime807_ref_##s
+
+
+#define q 6977
+#define Q 7508161
+#define OSKR_N 269   /* OSKR768 with 256-bit key */
+#define OSKR_K 3
+#define N_PRIME 576
+#define OSKR_ETA1 3
+#define OSKR_ETA2 3
+#define DV 4
+#define DU 11
+
+#define OSKR_SYMBYTES  32  //  (32 * OSKR_N / 256)   /* size in bytes of hashes, and seeds */
+#define OSKR_SSBYTES   32  //  (32 * OSKR_N / 256)   /* size in bytes of shared key */
+
+/* length for poly */
+#define OSKR_POLYBYTES		438
+#define OSKR_POLYVECBYTES	(OSKR_K * OSKR_POLYBYTES)
+
+/* length for secret key */
+#define OSKR_SECRETBYTES    101
+#define OSKR_SECRETVECBYTES	(OSKR_K * OSKR_SECRETBYTES)
+
+/* length for poly v in ct */
+#define OSKR_POLYCOMPRESSEDBYTES_CV 135
+
+/* length for poly u.vec[i] and polyvec u in ct */
+#define OSKR_POLYCOMPRESSEDBYTES_CU 370
+#define OSKR_POLYVECCOMPRESSEDBYTES_CU (OSKR_K * OSKR_POLYCOMPRESSEDBYTES_CU)
+
+/* B.W. for PKE */
+#define OSKR_INDCPA_MSGBYTES       (OSKR_SYMBYTES)
+#define OSKR_INDCPA_PUBLICKEYBYTES (OSKR_POLYVECBYTES + OSKR_SYMBYTES)
+#define OSKR_INDCPA_SECRETKEYBYTES (OSKR_SECRETVECBYTES)
+#define OSKR_INDCPA_CTBYTES        (OSKR_POLYVECCOMPRESSEDBYTES_CU + OSKR_POLYCOMPRESSEDBYTES_CV)
+
+/* B.W. for KEM */
+#define OSKR_PUBLICKEYBYTES        (OSKR_INDCPA_PUBLICKEYBYTES)
+#define OSKR_SECRETKEYBYTES        (OSKR_INDCPA_SECRETKEYBYTES + OSKR_INDCPA_PUBLICKEYBYTES + OSKR_SYMBYTES)
+#define OSKR_SECRETKEYBYTES_MLKEM  (OSKR_INDCPA_SECRETKEYBYTES + OSKR_INDCPA_PUBLICKEYBYTES + 2*OSKR_SYMBYTES)
+#define OSKR_CIPHERTEXTBYTES       (OSKR_INDCPA_CTBYTES)
+
+#endif
