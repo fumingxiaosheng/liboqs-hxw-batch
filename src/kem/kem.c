@@ -45,6 +45,10 @@ OQS_API const char *OQS_KEM_alg_identifier(size_t i) {
 		OQS_KEM_alg_frodokem_976_shake,
 		OQS_KEM_alg_frodokem_1344_aes,
 		OQS_KEM_alg_frodokem_1344_shake,
+
+		//HXW
+		OQS_KEM_alg_oskrprime_538,
+		OQS_KEM_alg_oskrprime_807,
 	};
 	if (i >= OQS_KEM_algs_length) {
 		return NULL;
@@ -255,8 +259,25 @@ OQS_API int OQS_KEM_alg_is_enabled(const char *method_name) {
 #else
 		return 0;
 #endif
+	}
 		// EDIT-WHEN-ADDING-KEM
-	} else {
+	//HXW begin
+	else if( 0 == strcasecmp(method_name, OQS_KEM_alg_oskrprime_538)) {
+#ifdef OQS_KEM_alg_oskrprime_538
+		return 1;
+#else 
+		return 0;
+#endif
+	}
+	else if( 0 == strcasecmp(method_name, OQS_KEM_alg_oskrprime_807)) {
+#ifdef OQS_KEM_alg_oskrprime_807
+		return 1;
+#else 
+		return 0;
+#endif
+	}
+	//hxw end 
+	else {
 		return 0;
 	}
 }
@@ -460,8 +481,27 @@ OQS_API OQS_KEM *OQS_KEM_new(const char *method_name) {
 #else
 		return NULL;
 #endif
-		// EDIT-WHEN-ADDING-KEM
-	} else {
+	}	// EDIT-WHEN-ADDING-KEM
+	// HXW begin
+	else if (0 == strcasecmp(method_name, OQS_KEM_alg_oskrprime_538)) {
+#ifdef OQS_ENABLE_KEM_oskrprime_538
+		return OQS_KEM_oskrprime_538_new(); //TODO:检查在cmake中的定义是否能够达到正确的效果
+#else
+		return NULL;
+#endif
+	}
+
+	else if (0 == strcasecmp(method_name, OQS_KEM_alg_oskrprime_807)) {
+#ifdef OQS_ENABLE_KEM_oskrprime_807
+		return OQS_KEM_oskrprime_807_new(); //TODO:检查在cmake中的定义是否能够达到正确的效果
+#else
+		return NULL;
+#endif
+	}
+	// HXW end
+
+	
+	else {
 		return NULL;
 	}
 }

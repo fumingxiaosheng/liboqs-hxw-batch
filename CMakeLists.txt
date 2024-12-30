@@ -235,6 +235,12 @@ endif()
 if(OQS_ENABLE_KEM_ML_KEM)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/ml_kem/kem_ml_kem.h)
 endif()
+
+#HXW begin
+if(OQS_ENABLE_KEM_OSKRPRIME)
+    set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/kem/oskrprime/kem_oskrprime.h)
+endif()
+#HXW end
 if(OQS_ENABLE_SIG_DILITHIUM)
     set(PUBLIC_HEADERS ${PUBLIC_HEADERS} ${PROJECT_SOURCE_DIR}/src/sig/dilithium/sig_dilithium.h)
 endif()

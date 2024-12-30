@@ -39,6 +39,13 @@ if(OQS_ENABLE_KEM_ML_KEM)
     add_subdirectory(kem/ml_kem)
     set(KEM_OBJS ${KEM_OBJS} ${ML_KEM_OBJS})
 endif()
+
+#HXW BEGING
+if(OQS_ENABLE_KEM_OSKRPRIME)
+    add_subdirectory(kem/oskrprime)
+    set(KEM_OBJS ${KEM_OBJS} ${OSKRPRIME_OBJS})
+endif()
+#HXW END
 if(OQS_ENABLE_SIG_DILITHIUM)
     add_subdirectory(sig/dilithium)
     set(SIG_OBJS ${SIG_OBJS} ${DILITHIUM_OBJS})
