@@ -1,0 +1,26 @@
+name: OSKR-Prime
+type: kem
+principal-submitters:
+- Liang Zhichuang
+crypto-assumption: NTRU
+website: https://github.com/Prime-KEM/FPTRU-KEM
+nist-round: 1
+spec-version: china
+parameter-sets:
+- name: oskrprime538
+  claimed-nist-level: 1
+  claimed-security: IND-CCA2
+  length-public-key: 908
+  length-ciphertext: 875
+  length-secret-key: 1210
+  length-shared-secret: 32
+  implementations-switch-on-runtime-cpu-features: true
+
+- name: oskrprime807
+  claimed-nist-level: 1
+  claimed-security: IND-CCA2
+  length-public-key: 1346
+  length-ciphertext: 1245
+  length-secret-key: 1681
+  length-shared-secret: 32
+  implementations-switch-on-runtime-cpu-features: true

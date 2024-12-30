@@ -1,8 +1,8 @@
-# Install script for directory: /home/hxw/liboqs/src/common/sha3/xkcp_low
+# Install script for directory: /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/src/common/sha3/xkcp_low
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "/home/hxw/oqs-provider-hxw/.local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

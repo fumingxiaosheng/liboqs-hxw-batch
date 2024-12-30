@@ -1,10 +1,10 @@
 # As per https://gitlab.kitware.com/cmake/community/-/wikis/FAQ#can-i-do-make-uninstall-with-cmake
 
-if(NOT EXISTS "/home/hxw/liboqs/_build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: /home/hxw/liboqs/_build/install_manifest.txt")
+if(NOT EXISTS "/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/install_manifest.txt")
 endif()
 
-file(READ "/home/hxw/liboqs/_build/install_manifest.txt" files)
+file(READ "/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach(file ${files})
   message(STATUS "Uninstalling $ENV{DESTDIR}${file}")

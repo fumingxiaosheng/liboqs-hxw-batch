@@ -1,8 +1,8 @@
-# Install script for directory: /home/hxw/liboqs
+# Install script for directory: /home/hxw/oqs-provider-hxw/liboqs-hxw-batch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "/home/hxw/oqs-provider-hxw/.local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hxw/liboqs/_build/src/cmake_install.cmake")
+  include("/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/hxw/liboqs/_build/tests/cmake_install.cmake")
+  include("/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hxw/liboqs/_build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,18 +1,18 @@
 Determining if the explicit_memset exist failed with the following output:
-Change Dir: /home/hxw/liboqs/_build/CMakeFiles/CMakeTmp
+Change Dir: /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/ninja cmTC_efb1b && [1/2] Building C object CMakeFiles/cmTC_efb1b.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_efb1b.dir/CheckSymbolExists.c.o 
-/usr/bin/cc   -fPIE -std=gnu11 -o CMakeFiles/cmTC_efb1b.dir/CheckSymbolExists.c.o -c /home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-/home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
-/home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘explicit_memset’ undeclared (first use in this function)
+Run Build Command(s):/usr/bin/ninja cmTC_1df64 && [1/2] Building C object CMakeFiles/cmTC_1df64.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_1df64.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -fPIE -std=gnu11 -o CMakeFiles/cmTC_1df64.dir/CheckSymbolExists.c.o -c /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘explicit_memset’ undeclared (first use in this function)
     8 |   return ((int*)(&explicit_memset))[argc];
       |                   ^~~~~~~~~~~~~~~
-/home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
 ninja: build stopped: subcommand failed.
 
 
-File /home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <string.h>
 
@@ -27,21 +27,21 @@ int main(int argc, char** argv)
 #endif
 }
 Determining if the memset_s exist failed with the following output:
-Change Dir: /home/hxw/liboqs/_build/CMakeFiles/CMakeTmp
+Change Dir: /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/ninja cmTC_7bc90 && [1/2] Building C object CMakeFiles/cmTC_7bc90.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_7bc90.dir/CheckSymbolExists.c.o 
-/usr/bin/cc   -fPIE -std=gnu11 -o CMakeFiles/cmTC_7bc90.dir/CheckSymbolExists.c.o -c /home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-/home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
-/home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘memset_s’ undeclared (first use in this function); did you mean ‘memset’?
+Run Build Command(s):/usr/bin/ninja cmTC_bf18a && [1/2] Building C object CMakeFiles/cmTC_bf18a.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_bf18a.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -fPIE -std=gnu11 -o CMakeFiles/cmTC_bf18a.dir/CheckSymbolExists.c.o -c /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘memset_s’ undeclared (first use in this function); did you mean ‘memset’?
     8 |   return ((int*)(&memset_s))[argc];
       |                   ^~~~~~~~
       |                   memset
-/home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
 ninja: build stopped: subcommand failed.
 
 
-File /home/hxw/liboqs/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <string.h>
 

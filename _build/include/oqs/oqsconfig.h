@@ -136,8 +136,8 @@
 
 /////HXW begin
 #define OQS_ENABLE_KEM_OSKRPRIME 1
-/* #undef OQS_ENABLE_KEM_oskrprime_538 */
-#define OQS_ENABLE_KEM_oskrprime_807 1
+#define OQS_ENABLE_KEM_oskrprime_538 1
+/* #undef OQS_ENABLE_KEM_oskrprime_807 */
 /////HXW end
 #define OQS_ENABLE_SIG_DILITHIUM 1
 #define OQS_ENABLE_SIG_dilithium_2 1

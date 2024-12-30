@@ -280,7 +280,7 @@ rule C_COMPILER__ml_kem_1024_ref_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__oskrprime_807_
+rule C_COMPILER__oskrprime_538_
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/cc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -780,7 +780,7 @@ rule C_EXECUTABLE_LINKER__vectors_kem_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/hxw/liboqs -B/home/hxw/liboqs/_build
+  command = /usr/bin/cmake --regenerate-during-build -S/home/hxw/oqs-provider-hxw/liboqs-hxw-batch -B/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build
   description = Re-running CMake...
   generator = 1
 

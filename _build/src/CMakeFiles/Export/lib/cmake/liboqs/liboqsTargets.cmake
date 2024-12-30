@@ -55,7 +55,7 @@ add_library(OQS::oqs STATIC IMPORTED)
 
 set_target_properties(OQS::oqs PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include/oqs"
-  INTERFACE_LINK_LIBRARIES "/usr/lib/x86_64-linux-gnu/libcrypto.so"
+  INTERFACE_LINK_LIBRARIES "/home/hxw/oqs-provider-hxw/.local/lib/libcrypto.so"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

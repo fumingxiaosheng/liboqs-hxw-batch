@@ -45,15 +45,15 @@ unset(_expectedTargets)
 add_library(OQS::oqs STATIC IMPORTED)
 
 set_target_properties(OQS::oqs PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/home/hxw/liboqs/src"
-  INTERFACE_LINK_LIBRARIES "/usr/lib/x86_64-linux-gnu/libcrypto.so"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/src"
+  INTERFACE_LINK_LIBRARIES "/home/hxw/oqs-provider-hxw/.local/lib/libcrypto.so"
 )
 
 # Import target "OQS::oqs" for configuration ""
 set_property(TARGET OQS::oqs APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(OQS::oqs PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "ASM;C"
-  IMPORTED_LOCATION_NOCONFIG "/home/hxw/liboqs/_build/lib/liboqs.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/lib/liboqs.a"
   )
 
 # This file does not depend on other imported targets which have

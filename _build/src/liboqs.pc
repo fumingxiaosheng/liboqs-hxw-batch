@@ -1,4 +1,4 @@
-prefix=/usr/local
+prefix=/home/hxw/oqs-provider-hxw/.local
 libdir=${prefix}/lib
 includedir=${prefix}/include
 
