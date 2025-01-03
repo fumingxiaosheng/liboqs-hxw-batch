@@ -1,9 +1,9 @@
 Determining if the explicit_memset exist failed with the following output:
 Change Dir: /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/ninja cmTC_e7470 && [1/2] Building C object CMakeFiles/cmTC_e7470.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_e7470.dir/CheckSymbolExists.c.o 
-/usr/bin/cc   -fPIE -std=gnu11 -o CMakeFiles/cmTC_e7470.dir/CheckSymbolExists.c.o -c /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):/usr/bin/ninja cmTC_17892 && [1/2] Building C object CMakeFiles/cmTC_17892.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_17892.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -fPIE -std=gnu11 -o CMakeFiles/cmTC_17892.dir/CheckSymbolExists.c.o -c /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘explicit_memset’ undeclared (first use in this function)
     8 |   return ((int*)(&explicit_memset))[argc];
@@ -29,9 +29,9 @@ int main(int argc, char** argv)
 Determining if the memset_s exist failed with the following output:
 Change Dir: /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/ninja cmTC_cc536 && [1/2] Building C object CMakeFiles/cmTC_cc536.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_cc536.dir/CheckSymbolExists.c.o 
-/usr/bin/cc   -fPIE -std=gnu11 -o CMakeFiles/cmTC_cc536.dir/CheckSymbolExists.c.o -c /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):/usr/bin/ninja cmTC_baed9 && [1/2] Building C object CMakeFiles/cmTC_baed9.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_baed9.dir/CheckSymbolExists.c.o 
+/usr/bin/cc   -fPIE -std=gnu11 -o CMakeFiles/cmTC_baed9.dir/CheckSymbolExists.c.o -c /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘memset_s’ undeclared (first use in this function); did you mean ‘memset’?
     8 |   return ((int*)(&memset_s))[argc];

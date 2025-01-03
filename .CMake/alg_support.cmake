@@ -133,10 +133,16 @@ cmake_dependent_option(OQS_ENABLE_KEM_ml_kem_1024 "" ON "OQS_ENABLE_KEM_ML_KEM" 
 
 # hxw begin
 option(OQS_ENABLE_KEM_OSKRPRIME "Enable oskrprime algorithm family" ON)
-#option(OQS_ENABLE_KEM_oskrprime_538 "Enable oskrprime algorithm family" OFF)
-cmake_dependent_option(OQS_ENABLE_KEM_oskrprime_538 "" ON "OQS_ENABLE_KEM_OSKRPRIME" OFF)
+option(OQS_ENABLE_KEM_oskrprime_538 "Enable oskrprime algorithm family" OFF)
+#cmake_dependent_option(OQS_ENABLE_KEM_oskrprime_538 "" ON "OQS_ENABLE_KEM_OSKRPRIME" OFF)
+option(OQS_ENABLE_KEM_oskrprime_771 "Enable oskrprime algorithm family" OFF)
+#cmake_dependent_option(OQS_ENABLE_KEM_oskrprime_771 "" ON "OQS_ENABLE_KEM_OSKRPRIME" OFF)
 option(OQS_ENABLE_KEM_oskrprime_807 "Enable oskrprime algorithm family" OFF)
 #cmake_dependent_option(OQS_ENABLE_KEM_oskrprime_807 "" ON "OQS_ENABLE_KEM_OSKRPRIME" OFF)
+#option(OQS_ENABLE_KEM_oskrprime_1076 "Enable oskrprime algorithm family" OFF)
+cmake_dependent_option(OQS_ENABLE_KEM_oskrprime_1076 "" ON "OQS_ENABLE_KEM_OSKRPRIME" OFF)
+option(OQS_ENABLE_KEM_oskrprime_1142 "Enable oskrprime algorithm family" OFF)
+#cmake_dependent_option(OQS_ENABLE_KEM_oskrprime_1142 "" ON "OQS_ENABLE_KEM_OSKRPRIME" OFF)
 # hxw end
 option(OQS_ENABLE_SIG_DILITHIUM "Enable dilithium algorithm family" ON)
 cmake_dependent_option(OQS_ENABLE_SIG_dilithium_2 "" ON "OQS_ENABLE_SIG_DILITHIUM" OFF)

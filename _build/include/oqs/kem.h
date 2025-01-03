@@ -94,13 +94,15 @@ extern "C" {
 
 //hxw
 #define OQS_KEM_alg_oskrprime_538 "Oskrprime538"
+#define OQS_KEM_alg_oskrprime_771 "Oskrprime771"
 #define OQS_KEM_alg_oskrprime_807 "Oskrprime807"
-
+#define OQS_KEM_alg_oskrprime_1076 "Oskrprime1076"
+#define OQS_KEM_alg_oskrprime_1142 "Oskrprime1142"
 // EDIT-WHEN-ADDING-KEM
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_START
 
 /** Number of algorithm identifiers above. */
-#define OQS_KEM_algs_length 31
+#define OQS_KEM_algs_length 34
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_END
 
 /**

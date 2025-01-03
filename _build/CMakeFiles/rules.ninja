@@ -280,7 +280,7 @@ rule C_COMPILER__ml_kem_1024_ref_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__oskrprime_538_
+rule C_COMPILER__oskrprime_1076_
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/cc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in

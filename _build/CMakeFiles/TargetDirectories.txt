@@ -86,7 +86,7 @@
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/kem/ml_kem/CMakeFiles/install.dir
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/kem/ml_kem/CMakeFiles/install/local.dir
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/kem/ml_kem/CMakeFiles/install/strip.dir
-/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/kem/oskrprime/CMakeFiles/oskrprime_538.dir
+/home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/kem/oskrprime/CMakeFiles/oskrprime_1076.dir
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/kem/oskrprime/CMakeFiles/package.dir
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/kem/oskrprime/CMakeFiles/package_source.dir
 /home/hxw/oqs-provider-hxw/liboqs-hxw-batch/_build/src/kem/oskrprime/CMakeFiles/edit_cache.dir

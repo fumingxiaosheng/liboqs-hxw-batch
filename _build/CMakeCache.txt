@@ -355,7 +355,16 @@ OQS_ENABLE_KEM_ml_kem_768:BOOL=ON
 
 OQS_ENABLE_KEM_ntruprime_sntrup761:BOOL=ON
 
-OQS_ENABLE_KEM_oskrprime_538:BOOL=ON
+OQS_ENABLE_KEM_oskrprime_1076:BOOL=ON
+
+//Enable oskrprime algorithm family
+OQS_ENABLE_KEM_oskrprime_1142:BOOL=OFF
+
+//Enable oskrprime algorithm family
+OQS_ENABLE_KEM_oskrprime_538:BOOL=OFF
+
+//Enable oskrprime algorithm family
+OQS_ENABLE_KEM_oskrprime_771:BOOL=OFF
 
 //Enable oskrprime algorithm family
 OQS_ENABLE_KEM_oskrprime_807:BOOL=OFF

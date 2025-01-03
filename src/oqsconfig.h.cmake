@@ -137,7 +137,10 @@
 /////HXW begin
 #cmakedefine OQS_ENABLE_KEM_OSKRPRIME 1
 #cmakedefine OQS_ENABLE_KEM_oskrprime_538 1
+#cmakedefine OQS_ENABLE_KEM_oskrprime_771 1
 #cmakedefine OQS_ENABLE_KEM_oskrprime_807 1
+#cmakedefine OQS_ENABLE_KEM_oskrprime_1076 1
+#cmakedefine OQS_ENABLE_KEM_oskrprime_1142 1
 /////HXW end
 #cmakedefine OQS_ENABLE_SIG_DILITHIUM 1
 #cmakedefine OQS_ENABLE_SIG_dilithium_2 1

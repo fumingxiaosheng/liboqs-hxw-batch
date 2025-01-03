@@ -24,3 +24,21 @@ parameter-sets:
   length-secret-key: 1681
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
+
+- name: oskrprime1076
+  claimed-nist-level: 1
+  claimed-security: IND-CCA2
+  length-public-key: 1784
+  length-ciphertext: 1785
+  length-secret-key: 2220
+  length-shared-secret: 32
+  implementations-switch-on-runtime-cpu-features: true
+
+- name: oskrprime771
+  claimed-nist-level: 1
+  claimed-security: IND-CCA2
+  length-public-key: 1190
+  length-ciphertext: 1223
+  length-secret-key: 1513
+  length-shared-secret: 32
+  implementations-switch-on-runtime-cpu-features: true
