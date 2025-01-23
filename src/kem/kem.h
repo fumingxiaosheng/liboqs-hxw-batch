@@ -98,11 +98,12 @@ extern "C" {
 #define OQS_KEM_alg_oskrprime_807 "Oskrprime807"
 #define OQS_KEM_alg_oskrprime_1076 "Oskrprime1076"
 #define OQS_KEM_alg_oskrprime_1142 "Oskrprime1142"
+#define OQS_KEM_alg_ntruprime_sntrup857 "sntrup857"
 // EDIT-WHEN-ADDING-KEM
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_START
 
 /** Number of algorithm identifiers above. */
-#define OQS_KEM_algs_length 34
+#define OQS_KEM_algs_length 35
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ALGS_LENGTH_END
 
 /**
@@ -301,7 +302,7 @@ OQS_API void OQS_KEM_free(OQS_KEM *kem);
 #endif
 
 #if defined(__cplusplus)
-} // extern "C"
+} // extern "C"c
 #endif
 
 #endif // OQS_KEM_H

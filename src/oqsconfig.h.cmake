@@ -84,6 +84,8 @@
 
 #cmakedefine OQS_ENABLE_KEM_NTRUPRIME 1
 #cmakedefine OQS_ENABLE_KEM_ntruprime_sntrup761 1
+///// hxw
+#cmakedefine OQS_ENABLE_KEM_ntruprime_sntrup857 1
 #cmakedefine OQS_ENABLE_KEM_ntruprime_sntrup761_avx2 1
 
 ///// OQS_COPY_FROM_UPSTREAM_FRAGMENT_ADD_ALG_ENABLE_DEFINES_START

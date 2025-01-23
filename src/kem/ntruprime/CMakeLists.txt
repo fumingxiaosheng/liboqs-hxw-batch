@@ -26,4 +26,37 @@ if(OQS_ENABLE_KEM_ntruprime_sntrup761_avx2)
     set(_NTRUPRIME_OBJS ${_NTRUPRIME_OBJS} $<TARGET_OBJECTS:ntruprime_sntrup761_avx2>)
 endif()
 
+if(OQS_ENABLE_KEM_ntruprime_sntrup857)
+    add_library(ntruprime_sntrup857_clean OBJECT kem_ntruprime_sntrup857.c
+    pqclean_sntrup857_clean/crypto_encode_857x1723round.c
+    pqclean_sntrup857_clean/crypto_core_mult3sntrup857.c
+    pqclean_sntrup857_clean/crypto_verify_1184.c
+    pqclean_sntrup857_clean/crypto_decode_857xint32.c
+    pqclean_sntrup857_clean/crypto_encode_857xfreeze3.c
+    pqclean_sntrup857_clean/crypto_encode_857x5167.c
+    pqclean_sntrup857_clean/crypto_core_invsntrup857.c
+    pqclean_sntrup857_clean/crypto_encode_int16.c
+    pqclean_sntrup857_clean/crypto_decode_857x1723.c
+    pqclean_sntrup857_clean/crypto_decode_857xint16.c
+    pqclean_sntrup857_clean/crypto_encode_857x3.c
+    pqclean_sntrup857_clean/crypto_core_inv3sntrup857.c
+    pqclean_sntrup857_clean/crypto_encode_857xint16.c
+    pqclean_sntrup857_clean/crypto_decode_857x3.c
+    pqclean_sntrup857_clean/crypto_core_scale3sntrup857.c
+    pqclean_sntrup857_clean/crypto_decode_857x5167.c
+    pqclean_sntrup857_clean/crypto_sort_uint32.c
+    pqclean_sntrup857_clean/crypto_encode_857x1723.c
+    pqclean_sntrup857_clean/crypto_core_wforcesntrup857.c
+    pqclean_sntrup857_clean/crypto_sort_int32.c
+    pqclean_sntrup857_clean/crypto_core_weightsntrup857.c
+    pqclean_sntrup857_clean/kem.c
+    pqclean_sntrup857_clean/crypto_core_multsntrup857.c)
+    target_include_directories(ntruprime_sntrup857_clean PRIVATE ${CMAKE_CURRENT_LIST_DIR}/pqclean_sntrup857_clean)
+    target_include_directories(ntruprime_sntrup857_clean PRIVATE ${PROJECT_SOURCE_DIR}/src/common/pqclean_shims)
+    if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+        target_compile_definitions(ntruprime_sntrup857_clean PRIVATE old_gas_syntax)
+    endif()
+    set(_NTRUPRIME_OBJS ${_NTRUPRIME_OBJS} $<TARGET_OBJECTS:ntruprime_sntrup857_clean>)
+endif()
+
 set(NTRUPRIME_OBJS ${_NTRUPRIME_OBJS} PARENT_SCOPE)

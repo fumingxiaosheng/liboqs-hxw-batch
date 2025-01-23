@@ -16,5 +16,16 @@ OQS_API OQS_STATUS OQS_KEM_ntruprime_sntrup761_encaps(uint8_t *ciphertext, uint8
 OQS_API OQS_STATUS OQS_KEM_ntruprime_sntrup761_decaps(uint8_t *shared_secret, const uint8_t *ciphertext, const uint8_t *secret_key);
 #endif
 
+
+#ifdef OQS_ENABLE_KEM_ntruprime_sntrup857
+#define OQS_KEM_ntruprime_sntrup857_length_public_key 1322
+#define OQS_KEM_ntruprime_sntrup857_length_secret_key 1999
+#define OQS_KEM_ntruprime_sntrup857_length_ciphertext 1184
+#define OQS_KEM_ntruprime_sntrup857_length_shared_secret 32
+OQS_KEM *OQS_KEM_ntruprime_sntrup857_new(void);
+OQS_API OQS_STATUS OQS_KEM_ntruprime_sntrup857_keypair(uint8_t *public_key, uint8_t *secret_key);
+OQS_API OQS_STATUS OQS_KEM_ntruprime_sntrup857_encaps(uint8_t *ciphertext, uint8_t *shared_secret, const uint8_t *public_key);
+OQS_API OQS_STATUS OQS_KEM_ntruprime_sntrup857_decaps(uint8_t *shared_secret, const uint8_t *ciphertext, const uint8_t *secret_key);
+#endif
 #endif
 
